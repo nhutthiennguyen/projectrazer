@@ -1,0 +1,25 @@
+.gallery-component {
+    @extend .slide;
+    width: calc(100% - 1px);
+    
+        .gallery-component-content{
+            @extend .slide-content;
+           
+            
+        }
+    &:before{
+        animation: animate 20s linear infinite;
+    }    
+    @keyframes animate{
+        0%{
+            background-position: 0 0;
+        }
+        50%{
+            background-position: 400% 0;
+        }
+        100%{
+            background-position: 0 0;
+        }
+    }
+}
+

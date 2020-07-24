@@ -1,0 +1,50 @@
+.slide {
+    position: relative;
+    margin-top: 2px;
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+        &-content {
+            text-align: center;
+            padding-top: 5%;
+                h1{
+                    color: $secondary-color;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                }
+                p{
+                    color: white;
+                    font-size: 25px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                }
+                span {
+                    color: $third-color;
+                }
+        }
+       
+&:before{
+    content: '';
+    position: absolute;
+    top: -2px;left: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% + 2px);
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000 );
+    background-size: 400%;
+    z-index: -1;
+    animation: animate1 20s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+}

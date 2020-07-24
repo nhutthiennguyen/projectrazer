@@ -1,0 +1,22 @@
+
+header{
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    width: 100%;
+    height: 60px;
+    background-color: $primary-color;
+    display: flex;
+    color: $secondary-color;
+    align-items: center;
+    justify-content: space-around;
+    .PrivateTabIndicator-colorSecondary-5 {
+        background:$third-color;
+        height: 1px;
+
+    }
+    
+    .MuiIconButton-root {
+        color:$secondary-color;
+    }
+}

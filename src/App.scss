@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+$primary-color: #222;
+$secondary-color:#999;
+$third-color:#44d62c;
+$primary-font:RazerF5,helvetica neue,Arial,noto sans,sans-serif;
+
+.content{
+    margin-top: 62px;
+}
+
+
+@import './scss/Header.scss';
+@import './scss/Silde.scss';
+@import './scss/Gallery.scss';
+@import './scss/Footer.scss';
