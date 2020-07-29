@@ -10,7 +10,7 @@ const backgroundImg6 = require('../img/gallery6.jpg');
 
 const Gallery = ()=>{   
     return (
-        <Grid container spacing={0}>
+        <Grid className="gallery" container spacing={0}>
             <Grid item xs={12} sm={6} lg={6}>
                 <GalleryComponent backgroundImg={backgroundImg1} title="enjoy savings of $100" name="shop razer blade steath 13" />
             </Grid>

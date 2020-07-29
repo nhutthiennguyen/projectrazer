@@ -1,9 +1,10 @@
 import React from 'react';
+import Social from './Social';
 
 const Footer = ()=>{
     return(
         <footer>
-            s
+            <Social/>
         </footer>
     )
 }

@@ -6,7 +6,7 @@ import {makeStyles} from '@material-ui/core/styles';
 
 
 export default function Navigation() {
-  const [selectedTab, setSelectedTab] = React.useState(null);
+  const [selectedTab, setSelectedTab] = React.useState(0);
   const handleChange = (event, newValue) => {
       setSelectedTab(newValue);
   }
@@ -30,9 +30,9 @@ export default function Navigation() {
           onChange={handleChange}
           
         >
-          <Tab className={classes.root} label="Products" component={Link} to="/" />
-          <Tab className={classes.root} label="About Us" component={Link} to="/"  />
-          <Tab className={classes.root} label="User Agreement"/>
+          <Tab className={classes.root} label="Home" component={Link} to="/" />
+          <Tab className={classes.root} label="Products" component={Link} to="/products" />
+          <Tab className={classes.root} label="About Us" component={Link} to="/About"  />
           <Tab className={classes.root} label="Privacy Policy" />
           <Tab className={classes.root} label="Environment"/>
         </Tabs>
