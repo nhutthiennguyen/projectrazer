@@ -2,21 +2,19 @@ import React, {useState} from 'react';
 import {Accordion, AccordionSummary, AccordionDetails,FormControlLabel,Checkbox, Grid } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { green } from '@material-ui/core/colors';
+import {connect} from 'react-redux';
+import * as types from '../redux/actions/filterAction';
 
 
-const FilterDetail = ({ label, title,})=>{
-    const [isChecked, setIsChecked] = useState(false);
-    const [filter, setFilter] = useState('');
+const FilterDetail = (props)=>{
+    const [checked, setChecked] = useState(false);
+
+    const { label, title} = props;
+    
     const onAddFilter = (event)=>{
-        const value = event.target.value;
-        setIsChecked(!isChecked)
-        if (isChecked){
-            setFilter(value);
-        }else{
-            return;
-        }
-        console.log(filter)
         
+        const value = event.target.value
+        console.log(value)
     }
     
     
@@ -33,7 +31,7 @@ const FilterDetail = ({ label, title,})=>{
                 {label.map((x,y)=>
                     <FormControlLabel
                         key = {y}
-                        control= {<Checkbox value={x.label}  onChange={onAddFilter}  />}
+                        control= {<Checkbox value={x.label} checked={checked} onChange={onAddFilter}  />}
                         label = { x.label }
                         
                      />
@@ -43,5 +41,14 @@ const FilterDetail = ({ label, title,})=>{
       </Grid>
     )
 }
-
-export default FilterDetail;
+const mapStateToProps = state =>{
+    return{};
+}
+const mapDispatchToProps = (dispatch, props)=>{
+    return{
+        onAddFilter: (item)=>{
+            dispatch(types.AddFilter(item))
+        }
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(FilterDetail);

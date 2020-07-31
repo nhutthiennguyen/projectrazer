@@ -4,13 +4,13 @@ import {Grid } from '@material-ui/core';
 
 
 
-const ProductsList = ({title, img, name, core, windows, display, card, memory, price})=>{
+const ProductsList = ({id,title, img, name, core, windows, display, card, memory, price})=>{
     
     return (
         <Grid item xs={12} sm={6} md={4} lg={4} className="cart">
         
             <div className="cart-img">
-                <Link to="#"><img src={img} alt="laptop" /></Link>
+                <Link to={"/product-detail/" + id}><img src={img} alt="laptop" /></Link>
             </div>
             <div className="cart-title">{title}</div>
             <div className="cart-content">

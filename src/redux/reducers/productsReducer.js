@@ -1,7 +1,10 @@
-export default [
+
+import * as types from '../actions/productAction';
+
+let initialState = [
     {
         id: 1,
-        img: require('../img/cart-img1.png'),
+        img: require('../../img/cart-img1.png'),
         title: 'razer blade 15 studio',
         name: 'Razer Blade 15 Studio Edition - OLED 4K Touch 60Hz - Quadro RTX 5000 - Mercury',
         core: 'Intel Core i7-10875H',
@@ -9,19 +12,12 @@ export default [
         display: '15.6" 60Hz OLED 4K Touch',
         card: 'Quadro RTX 5000',
         memory: '32GB RAM, 1TB SSD',
-        price: 'US$4,299.99',
-        imgDetail1: require('../img/bg-product-detail1.jpg'),
-        imgDetail2: require('../img/bg-product-detail2.jpg'),
-        imgDetail3: require('../img/bg-product-detail3.jpg'),
-        imgDetail4: require('../img/bg-product-detail4.jpg'),
-        imgDetailThumb1: require('../img/bg-product-detail-thumb1.jpg'),
-        imgDetailThumb2: require('../img/bg-product-detail-thumb2.jpg'),
-        imgDetailThumb3: require('../img/bg-product-detail-thumb3.jpg'),
-        imgDetailThumb4: require('../img/bg-product-detail-thumb4.jpg')
+        price: 'US$4,299.99'
+      
     },
     {
         id: 2,
-        img: require('../img/cart-img2.png'),
+        img: require('../../img/cart-img2.png'),
         title: 'razer blade 15 ',
         name: 'Razer Blade 15 Advanced Edition - Full HD 240Hz - GeForce RTX 2070 Max-Q - Black',
         core: 'Intel Core i7-9750H',
@@ -33,7 +29,7 @@ export default [
     },
     {
         id: 3,
-        img: require('../img/cart-img3.png'),
+        img: require('../../img/cart-img3.png'),
         title: 'razer blade 17',
         name: 'Razer Blade Pro 17 - Full HD 300Hz - GeForce RTX 2080 Super Max-Q - Black',
         core: 'Intel Core i7-10875H',
@@ -45,7 +41,7 @@ export default [
     },
     {
         id: 4,
-        img: require('../img/cart-img4.png'),
+        img: require('../../img/cart-img4.png'),
         title: 'razer blade 15 studio',
         name: 'Razer Blade 15 Studio Edition - OLED 4K Touch 60Hz - Quadro RTX 5000 - Mercury',
         core: 'Intel Core i7-10875H',
@@ -57,7 +53,7 @@ export default [
     },
     {
         id: 5,
-        img: require('../img/cart-img5.png'),
+        img: require('../../img/cart-img5.png'),
         title: 'razer blade 15 studio',
         name: 'Razer Blade 15 Studio Edition - OLED 4K Touch 60Hz - Quadro RTX 5000 - Mercury',
         core: 'Intel Core i7-10875H',
@@ -69,7 +65,7 @@ export default [
     },
     {
         id: 6,
-        img: require('../img/cart-img6.png'),
+        img: require('../../img/cart-img6.png'),
         title: 'razer blade 15 studio',
         name: 'Razer Blade 15 Studio Edition - OLED 4K Touch 60Hz - Quadro RTX 5000 - Mercury',
         core: 'Intel Core i7-10875H',
@@ -79,4 +75,13 @@ export default [
         memory: '32GB RAM, 1TB SSD',
         price: 'US$4,299.99'
     }
-]
+];
+
+export default function(state=initialState,action){
+    switch(action.type){
+        case types.PRODUCT_DETAIL:
+        
+        default:
+            return state;
+    }
+}

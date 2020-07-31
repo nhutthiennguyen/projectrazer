@@ -6,6 +6,9 @@ import Products from './pages/Products';
 import AllProducts from './pages/AllProducts';
 import AboutUs from './pages/AboutUs';
 import Homepage from './pages/Homepage';
+import ProductDetail from './pages/ProductDetail';
+import {Provider} from 'react-redux';
+import store from './redux/store';
 import './App.scss';
 
 
@@ -15,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-        
+        <Provider store={store}>
         <BrowserRouter>
             <Header/>
                 <div className="content">
@@ -24,11 +27,12 @@ function App() {
                         <Route path="/products" component={Products}/>
                         <Route path="/about" component={AboutUs}/>
                         <Route path="/allproducts" component={AllProducts}/>
+                        <Route path="/product-detail/:id" component={ProductDetail}/>
                     </Switch>
                 </div>
             <Footer/>
         </BrowserRouter>
-       
+        </Provider>
     </div>
   );
 }

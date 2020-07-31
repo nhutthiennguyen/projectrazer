@@ -2,11 +2,11 @@ import React from 'react';
 import { Grid, Container } from '@material-ui/core';
 import BannerAllProducts from '../components/BannerAllProducts';
 import Filter from '../components/Filter';
-import cartproducts from '../utils/cartproducts';
 import ProductsList from '../components/ProductsList';
+import {connect} from 'react-redux';
 
 
-const AllProducts = ()=>{
+const AllProducts = ({products})=>{
     
     return (
     <div className="page-all-products">
@@ -25,8 +25,8 @@ const AllProducts = ()=>{
                         item 
                         spacing={0}
                         xs={12} sm={9} md={9} lg={9}>
-                             {cartproducts.map((x , y)=>
-                                <ProductsList key={ y } {...x} />
+                             {products.map((x , y)=>
+                                <ProductsList  key={ y } {...x} />
                                     )}
                     </Grid>
             </Grid>
@@ -35,5 +35,9 @@ const AllProducts = ()=>{
     </div>
     )
 }
-
-export default AllProducts;
+const mapStateToProps = (state)=>{
+    return{
+        products: state.products
+    }
+}
+export default connect(mapStateToProps,null)(AllProducts);

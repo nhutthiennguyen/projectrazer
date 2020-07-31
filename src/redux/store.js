@@ -1,7 +1,8 @@
 import {createStore} from 'redux';
-import myReducer from './reducer/index';
-import productsReducer from './reducer/index';
-const store = createStore(
-    productsReducer
-);
-export default store;
+import rootReducer from './reducers';
+
+export default createStore(
+    rootReducer,
+    {},
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    );
