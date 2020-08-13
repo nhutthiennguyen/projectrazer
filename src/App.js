@@ -4,9 +4,10 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Products from './pages/Products';
 import AllProducts from './pages/AllProducts';
-import AboutUs from './pages/AboutUs';
+
 import Homepage from './pages/Homepage';
 import ProductDetail from './pages/ProductDetail';
+import Cart from './pages/Cart';
 import {Provider} from 'react-redux';
 import store from './redux/store';
 import './App.scss';
@@ -21,13 +22,14 @@ function App() {
         <Provider store={store}>
         <BrowserRouter>
             <Header/>
+            
                 <div className="content">
                     <Switch>
                         <Route exact path="/" component={ Homepage } />
                         <Route path="/products" component={Products}/>
-                        <Route path="/about" component={AboutUs}/>
                         <Route path="/allproducts" component={AllProducts}/>
                         <Route path="/product-detail/:id" component={ProductDetail}/>
+                        <Route path="/cart" component={Cart} />
                     </Switch>
                 </div>
             <Footer/>

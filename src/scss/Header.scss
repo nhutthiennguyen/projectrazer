@@ -19,4 +19,7 @@ header{
     .MuiIconButton-root {
         color:$secondary-color;
     }
+    .MuiBadge-colorSecondary{
+        background-color: $third-color!important;
+    }
 }

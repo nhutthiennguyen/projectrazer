@@ -1,0 +1,99 @@
+
+.sub-menu {
+    
+    margin-top: 100px;
+    width: 100%;
+    height: 960px;
+    .sub-menu-tab{
+        display: flex;
+        flex-direction: column!important;
+        transition: .5s;
+        background: #222!important;
+    }
+   
+}
+.PrivateTabIndicator-colorSecondary-9{
+    background-color: $third-color!important;
+}
+.MuiTabs-scrollable{
+    background: #222;
+}
+.filter{
+    transition: .3s;
+}
+.MuiIconButton-root{
+    color: $third-color!important;
+}
+.cart-respon{
+    font-size: 10px;
+    .MuiButton-root{
+        font-size: .3rem;
+    }
+    .MuiSvgIcon-root{
+        font-size: .7rem;
+    }
+    h6{
+        font-size: 10px!important;
+    }
+    .cart-res{
+        min-height: auto!important;
+    }
+    .quantity{
+        
+        position: relative;
+        top: 0;left: 10px;
+        span{
+            transform: translateX(-15px);
+        }
+        h6{
+            position: relative;
+            top: 0; left: -13px;
+        }
+    }
+}
+.nav-res {
+    @extend .nav;
+    flex-direction: row!important;
+    bottom: -490px;
+    left: 50%!important;
+    li{
+        width: 50px;
+        height: 50px;
+        
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.product-detail-content-res{
+    
+    @extend .product-detail-content;
+    font-size: 10px;
+    h3,h6{
+        font-size: 20px;
+    }
+    button{
+        z-index: 1000;
+    }
+    
+    
+}
+.tech-spec-res{
+    
+    h1 {
+        font-size: 20px;
+        color: white;
+    }
+    .MuiTableCell-root{
+        font-size: 10px!important;
+    }
+}
+.footer-content-res {
+    @extend .footer-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}

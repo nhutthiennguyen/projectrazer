@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useMediaQuery } from '@material-ui/core';
+
 
 const SlideProductDetail = ({ imgDetail1, imgDetail2, imgDetail3, imgDetail4, imgDetailThumb1, imgDetailThumb2, imgDetailThumb3, imgDetailThumb4 }) => {
 
@@ -7,11 +7,10 @@ const SlideProductDetail = ({ imgDetail1, imgDetail2, imgDetail3, imgDetail4, im
     const onClick = (img) => {
         setSlide(img)
     }
-    const matches = useMediaQuery('(max-width: 769px)');
     return (
         <div className="product-detail-slide">
             <img id="silder" src={slide} alt="laptop" />
-            <ul className={!matches ? "nav" : "nav-res"}>
+            <ul className="nav">
                 <li onClick={() => onClick(imgDetail1)}><img src={imgDetailThumb1} alt="laptop" /></li>
                 <li onClick={() => onClick(imgDetail2)}><img src={imgDetailThumb2} alt="laptop" /></li>
                 <li onClick={() => onClick(imgDetail3)}><img src={imgDetailThumb3} alt="laptop" /></li>

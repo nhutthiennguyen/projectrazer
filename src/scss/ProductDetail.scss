@@ -38,6 +38,7 @@
                     }
                 }
         }
+       
 }
 .product-detail-content{
     border: solid 1px $third-color;
@@ -89,4 +90,12 @@
     color: white!important;
     font-size: 20px!important;
     font-family: $secondary-font;
+}
+.cart-page{
+    width: 100%;
+    min-height: 590px;
+    background:$primary-color;
+    .shopping-cart{
+        @extend .cart-res
+    }
 }
